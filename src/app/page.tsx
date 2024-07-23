@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import HeroSection from "./inicio/subcomps/HeroSection";
 import Brands from "./inicio/subcomps/Brands";
+import Portfolio from "./inicio/subcomps/Portfolio";
 import AboutUs from "./inicio/subcomps/AboutUs";
 import Services from "./inicio/subcomps/Services";
 import CallToAction from "./inicio/subcomps/CallToAction";
@@ -13,6 +14,7 @@ export default function Home() {
     <Navbar />
     <HeroSection />
     <Brands />
+    <Portfolio />
     <AboutUs />
     <Services />
     <CallToAction />

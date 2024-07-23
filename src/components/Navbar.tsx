@@ -18,7 +18,7 @@ function Navbar() {
 
   return (
     <div className="flex flex-col">
-      <header className="absolute inset-x-0 top-0 z-50 bg-white">
+      <header className="fixed inset-x-0 top-0 z-50 bg-white">
         <div className="flex flex-row w-full">
           <div className="bg-black text-transparent w-full h-1">s</div>
           <div className="bg-[#FF7208] text-transparent w-full h-1">s</div>
@@ -61,7 +61,7 @@ function Navbar() {
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <motion.a
-              href="/contact"
+              href="/contacto"
               className="rounded-md bg-orange-500 p-3 text-sm font-semibold text-white shadow-sm hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
               whileHover={{ scale: 1.05, backgroundColor: "#ff7849" }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -108,7 +108,7 @@ function Navbar() {
                 </div>
                 <div className="py-6">
                   <a
-                    href="/contact"
+                    href="/contacto"
                     className="rounded-md bg-orange-500 p-3 text-sm font-semibold text-white shadow-sm hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
                   >
                     Contactanos
