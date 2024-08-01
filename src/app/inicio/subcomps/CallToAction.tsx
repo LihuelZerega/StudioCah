@@ -4,7 +4,7 @@ import CallToActionImage from "@/images/CTAImage.png";
 
 function CallToAction() {
   return (
-    <section className="relative py-10 overflow-hidden px-6 sm:py-16 lg:py-24 lg:rounded-3xl max-w-7xl mx-auto">
+    <section className="relative py-10 overflow-hidden px-6 sm:py-16 lg:py-24 lg:rounded-3xl max-w-7xl mx-auto my-12">
       <div className="absolute inset-0">
         <img
           className="object-cover w-full h-full md:object-left md:scale-150 md:origin-top-left"

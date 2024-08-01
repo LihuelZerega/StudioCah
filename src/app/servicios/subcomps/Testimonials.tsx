@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
+import Logo4 from "@/images/Brands/Logo4.png";
 
 const variants = {
   hidden: { opacity: 0, y: 50 },
@@ -22,38 +24,31 @@ function Testimonials() {
           TESTIMONIOS
         </p>
         <h2 className="text-3xl text-black font-bold tracking-tight lg:text-4xl text-center">
-          ¿Que dicen nuestros clientes <br className="hidden lg:block"/> sobre nuestros servicios?
+          ¿Que dicen nuestros clientes <br className="hidden lg:block" /> sobre
+          nuestros servicios?
         </h2>
       </motion.div>
       <section className="py-16">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-6 lg:gap-10 sm:grid-cols-2 md:grid-cols-3">
-            <div className="flex flex-col bg-white border border-gray-200 rounded-md">
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-md">
               <div className="flex flex-col justify-between flex-1 p-8">
                 <div className="flex-1">
                   <blockquote>
-                    <p className="text-lg text-gray-800">
-                      “You made it so simple. My new site is so much faster and
-                      easier to work with than my old site. I just choose the
-                      page, make the change and click save.”
+                    <p className="text-lg text-neutral-500">
+                      “Nuestra identidad de marca se fortaleció. Nos ayudaron a
+                      definir una imagen clara y coherente. ¡Muy satisfechos con
+                      el resultado!”
                     </p>
                   </blockquote>
                 </div>
 
                 <div className="mt-8">
-                  <div className="w-full h-0 mb-8 border-t-2 border-gray-200 border-dotted"></div>
+                  <div className="w-full h-0 mb-8 border-t-2 border-neutral-200 border-dotted"></div>
                   <div className="flex items-center">
-                    <img
-                      className="flex-shrink-0 object-cover w-10 h-10 rounded-full"
-                      src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/8/avatar-1.jpg"
-                      alt=""
-                    />
                     <div className="ml-3">
-                      <p className="text-base font-semibold text-gray-800 truncate">
-                        Devon Lane
-                      </p>
-                      <p className="text-base text-gray-500 truncate">
-                        President of Sales
+                      <p className="text-base font-semibold text-neutral-800 truncate">
+                        Aqua Di Roma
                       </p>
                     </div>
                   </div>
@@ -61,31 +56,25 @@ function Testimonials() {
               </div>
             </div>
 
-            <div className="flex flex-col bg-white border border-gray-200 rounded-md">
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-md">
               <div className="flex flex-col justify-between flex-1 p-8">
                 <div className="flex-1">
                   <blockquote>
-                    <p className="text-lg text-gray-800">
-                      “Simply the best. Better than all the rest. I’d recommend
-                      this product to beginners and advanced users.”
+                    <p className="text-lg text-neutral-500">
+                      “Desde que gestionan nuestras redes sociales, vimos un
+                      aumento significativo en la interacción con nuestros
+                      seguidores. Su trabajo es fundamental para nuestro
+                      crecimiento.”
                     </p>
                   </blockquote>
                 </div>
 
                 <div className="mt-8">
-                  <div className="w-full h-0 mb-8 border-t-2 border-gray-200 border-dotted"></div>
+                  <div className="w-full h-0 mb-8 border-t-2 border-neutral-200 border-dotted"></div>
                   <div className="flex items-center">
-                    <img
-                      className="flex-shrink-0 object-cover w-10 h-10 rounded-full"
-                      src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/8/avatar-2.jpg"
-                      alt=""
-                    />
                     <div className="min-w-0 ml-3">
-                      <p className="text-base font-semibold text-gray-800 truncate">
-                        Ronald Richards
-                      </p>
-                      <p className="text-base text-gray-500 truncate">
-                        Marketing Coordinator
+                      <p className="text-base font-semibold text-neutral-800 truncate">
+                        Pluma Blanca
                       </p>
                     </div>
                   </div>
@@ -93,31 +82,24 @@ function Testimonials() {
               </div>
             </div>
 
-            <div className="flex flex-col bg-white border border-gray-200 rounded-md">
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-md">
               <div className="flex flex-col justify-between flex-1 p-8">
                 <div className="flex-1">
                   <blockquote>
-                    <p className="text-lg text-gray-800">
-                      “This is a top quality product. No need to think twice
-                      before making it live on web.”
+                    <p className="text-lg text-neutral-500">
+                      En las sesiones de asesoría personalizada nos brindaron
+                      estrategias concretas y adaptadas a nuestras necesidades.
+                      ¡Recomendados!”
                     </p>
                   </blockquote>
                 </div>
 
                 <div className="mt-8">
-                  <div className="w-full h-0 mb-8 border-t-2 border-gray-200 border-dotted"></div>
+                  <div className="w-full h-0 mb-8 border-t-2 border-neutral-200 border-dotted"></div>
                   <div className="flex items-center">
-                    <img
-                      className="flex-shrink-0 object-cover w-10 h-10 rounded-full"
-                      src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/8/avatar-3.jpg"
-                      alt=""
-                    />
                     <div className="min-w-0 ml-3">
-                      <p className="text-base font-semibold text-gray-800 truncate">
-                        Jane Cooper
-                      </p>
-                      <p className="text-base text-gray-500 truncate">
-                        Dog Trainer
+                      <p className="text-base font-semibold text-neutral-800 truncate">
+                        Essen
                       </p>
                     </div>
                   </div>
@@ -125,32 +107,24 @@ function Testimonials() {
               </div>
             </div>
 
-            <div className="flex flex-col bg-white border border-gray-200 rounded-md">
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-md">
               <div className="flex flex-col justify-between flex-1 p-8">
                 <div className="flex-1">
                   <blockquote>
-                    <p className="text-lg text-gray-800">
-                      “Finally, I’ve found a template that covers all bases for
-                      a bootstrapped startup. We were able to launch in days,
-                      not months.”
+                    <p className="text-lg text-neutral-500">
+                      “Las campañas publicitarias en Meta Ads que manejó Studio
+                      Cah fueron muy efectivas. Alcanzamos a un público más
+                      amplio y aumentamos nuestras ventas.”
                     </p>
                   </blockquote>
                 </div>
 
                 <div className="mt-8">
-                  <div className="w-full h-0 mb-8 border-t-2 border-gray-200 border-dotted"></div>
+                  <div className="w-full h-0 mb-8 border-t-2 border-neutral-200 border-dotted"></div>
                   <div className="flex items-center">
-                    <img
-                      className="flex-shrink-0 object-cover w-10 h-10 rounded-full"
-                      src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/8/avatar-4.jpg"
-                      alt=""
-                    />
                     <div className="min-w-0 ml-3">
-                      <p className="text-base font-semibold text-gray-800 truncate">
-                        Theresa Webb
-                      </p>
-                      <p className="text-base text-gray-500 truncate">
-                        Web Designer
+                      <p className="text-base font-semibold text-neutral-800 truncate">
+                        Merci
                       </p>
                     </div>
                   </div>
@@ -158,32 +132,25 @@ function Testimonials() {
               </div>
             </div>
 
-            <div className="flex flex-col bg-white border border-gray-200 rounded-md">
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-md">
               <div className="flex flex-col justify-between flex-1 p-8">
                 <div className="flex-1">
                   <blockquote>
-                    <p className="text-lg text-gray-800">
-                      “My new site is so much faster and easier to work with
-                      than my old site. I just choose the page, make the change
-                      and click save.”
+                    <p className="text-lg text-neutral-500">
+                      “El equipo de Studio Cah hizo un trabajo excelente con el
+                      diseño de nuestra marca. Todo, desde los flyers hasta las
+                      creatividades para redes sociales, refleja perfectamente
+                      nuestra identidad.”
                     </p>
                   </blockquote>
                 </div>
 
                 <div className="mt-8">
-                  <div className="w-full h-0 mb-8 border-t-2 border-gray-200 border-dotted"></div>
+                  <div className="w-full h-0 mb-8 border-t-2 border-neutral-200 border-dotted"></div>
                   <div className="flex items-center">
-                    <img
-                      className="flex-shrink-0 object-cover w-10 h-10 rounded-full"
-                      src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/8/avatar-5.jpg"
-                      alt=""
-                    />
                     <div className="min-w-0 ml-3">
-                      <p className="text-base font-semibold text-gray-800 truncate">
-                        Darlene Robertson
-                      </p>
-                      <p className="text-base text-gray-500 truncate">
-                        Medical Assistant
+                      <p className="text-base font-semibold text-neutral-800 truncate">
+                        Euphemia
                       </p>
                     </div>
                   </div>
@@ -191,32 +158,24 @@ function Testimonials() {
               </div>
             </div>
 
-            <div className="flex flex-col bg-white border border-gray-200 rounded-md">
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-md">
               <div className="flex flex-col justify-between flex-1 p-8">
                 <div className="flex-1">
                   <blockquote>
-                    <p className="text-lg text-gray-800">
-                      “You made it so simple. My new site is so much faster and
-                      easier to work with than my old site. I just choose the
-                      page, make the change and click save.”
+                    <p className="text-lg text-neutral-500">
+                      “Transformaron la manera en que interactuamos con nuestra
+                      comunidad online. Ahora, tenemos una audiencia mucho más
+                      comprometida y leal.”
                     </p>
                   </blockquote>
                 </div>
 
                 <div className="mt-8">
-                  <div className="w-full h-0 mb-8 border-t-2 border-gray-200 border-dotted"></div>
+                  <div className="w-full h-0 mb-8 border-t-2 border-neutral-200 border-dotted"></div>
                   <div className="flex items-center">
-                    <img
-                      className="flex-shrink-0 object-cover w-10 h-10 rounded-full"
-                      src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/8/avatar-6.jpg"
-                      alt=""
-                    />
                     <div className="min-w-0 ml-3">
-                      <p className="text-base font-semibold text-gray-800 truncate">
-                        Floyd Miles
-                      </p>
-                      <p className="text-base text-gray-500 truncate">
-                        Nursing Assistant
+                      <p className="text-base font-semibold text-neutral-800 truncate">
+                        Amora
                       </p>
                     </div>
                   </div>

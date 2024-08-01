@@ -3,9 +3,9 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const variants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 },
+};
 
 function Services() {
   return (
@@ -162,7 +162,7 @@ function Services() {
               </a>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <a
                 href="/servicios#pauta-publicitaria"
                 className="w-fit p-8 space-y-3 border-2 border-neutral-500 border-opacity-70 rounded-xl transition-all duration-500 hover:scale-105"
@@ -235,7 +235,7 @@ function Services() {
                   </svg>
                 </span>
 
-                <h1 className="text-2xl font-bold text-black capitalize">
+                <h1 className="text-xl font-bold text-black capitalize">
                   Diseño Integral
                 </h1>
 
@@ -243,6 +243,39 @@ function Services() {
                   Si buscás delegar el diseño de tu marca, nuestro pack de
                   diseño es la solución. Diseñamos tu feed e historias en base a
                   la identidad y valores de tu negocio.
+                </p>
+              </a>
+
+              <a
+                href="/servicios#pauta-publicitaria"
+                className="w-fit p-8 space-y-3 border-2 border-neutral-500 border-opacity-70 rounded-xl transition-all duration-500 hover:scale-105"
+              >
+                <span className="inline-block border-2 p-2 border-neutral-400 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="30"
+                    height="30"
+                    color="#2D29C2"
+                    fill="none"
+                  >
+                    <path
+                      d="M17.4776 10.0001C17.485 10 17.4925 10 17.5 10C19.9853 10 22 12.0147 22 14.5C22 16.9853 19.9853 19 17.5 19H7C4.23858 19 2 16.7614 2 14C2 11.4003 3.98398 9.26407 6.52042 9.0227M17.4776 10.0001C17.4924 9.83536 17.5 9.66856 17.5 9.5C17.5 6.46243 15.0376 4 12 4C9.12324 4 6.76233 6.20862 6.52042 9.0227M17.4776 10.0001C17.3753 11.1345 16.9286 12.1696 16.2428 13M6.52042 9.0227C6.67826 9.00768 6.83823 9 7 9C8.12582 9 9.16474 9.37209 10.0005 10"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+
+                <h1 className="text-xl font-semibold text-black capitalize">
+                  Tienda Nube
+                </h1>
+
+                <p className="text-neutral-500">
+                  Creamos de cero, configuramos y adaptamos tu Tienda Nube para
+                  que potencies tus ventas online.
                 </p>
               </a>
             </div>

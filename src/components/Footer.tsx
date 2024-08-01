@@ -4,7 +4,13 @@ import CahLogo from "@/images/png logo-17.png";
 
 function Footer() {
   return (
-    <footer className="bg-neutral-900">
+    <footer
+      className="bg-cover"
+      style={{
+        backgroundImage:
+          "url('https://res.cloudinary.com/dys0jotat/image/upload/v1722538689/FooterBg_dyswi4.png')",
+      }}
+    >
       <div className="container px-6 py-12 mx-auto">
         <div className="md:flex md:-mx-3 md:items-center md:justify-between">
           <h1 className="text-xl font-semibold tracking-tight text-neutral-200 md:mx-3 xl:text-2xl">

@@ -7,7 +7,14 @@ import { useInView } from "react-intersection-observer";
 import BrandingImage from "@/images/Branding.png";
 import SocialMediaImage from "@/images/Social Media.png";
 import PautaPublicitariaImage from "@/images/Pauta Publicitaria.png";
+import AsesoriaPersonalizada from "@/images/AsesoriaPersonalizada.png";
 import DisenoIntegral from "@/images/Diseño Integral.png";
+import TiendaNubeImage from "@/images/TiendaNubeImage.webp";
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 function Services() {
   const controls = useAnimation();
@@ -24,9 +31,46 @@ function Services() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const [ref3, inView3] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const [ref4, inView4] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const [ref5, inView5] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const [ref6, inView6] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
     <div>
-      <div id="branding" className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between content-container px-6 py-16 mx-auto max-w-7xl">
+      <motion.div
+        ref={ref1}
+        initial="hidden"
+        animate={inView1 ? "visible" : "hidden"}
+        variants={itemVariants}
+        id="branding"
+        className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between content-container px-6 py-16 mx-auto max-w-7xl"
+      >
         <div className="w-full flex items-center justify-center">
           <Image
             src={BrandingImage}
@@ -102,9 +146,16 @@ function Services() {
             Contratar Servicio
           </motion.a>
         </div>
-      </div>
+      </motion.div>
 
-      <div id="social-media" className="flex flex-col-reverse lg:flex-row items-center justify-between content-container px-6 py-16 mx-auto max-w-7xl">
+      <motion.div
+        ref={ref2}
+        initial="hidden"
+        animate={inView2 ? "visible" : "hidden"}
+        variants={itemVariants}
+        id="social-media"
+        className="flex flex-col-reverse lg:flex-row items-center justify-between content-container px-6 py-16 mx-auto max-w-7xl"
+      >
         <div className="w-full flex items-center justify-center">
           <Image
             src={SocialMediaImage}
@@ -187,15 +238,22 @@ function Services() {
             Contratar Servicio
           </motion.a>
         </div>
-      </div>
+      </motion.div>
 
-      <div id="asesoria-personalizada" className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between content-container px-6 py-16 mx-auto max-w-7xl">
+      <motion.div
+        ref={ref3}
+        initial="hidden"
+        animate={inView3 ? "visible" : "hidden"}
+        variants={itemVariants}
+        id="asesoria-personalizada"
+        className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between content-container px-6 py-16 mx-auto max-w-7xl"
+      >
         <div className="w-full flex items-center justify-center">
           <Image
-            src={BrandingImage}
-            alt="Branding"
-            width={400}
-            height={400}
+            src={AsesoriaPersonalizada}
+            alt="AsesoriaPersonalizada"
+            width={500}
+            height={500}
             className="mt-12 lg:mt-0"
           />
         </div>
@@ -253,9 +311,16 @@ function Services() {
             Contratar Servicio
           </motion.a>
         </div>
-      </div>
+      </motion.div>
 
-      <div id="pauta-publicitaria" className="flex flex-col-reverse lg:flex-row items-center justify-between content-container px-6 py-16 mx-auto max-w-7xl">
+      <motion.div
+        ref={ref4}
+        initial="hidden"
+        animate={inView4 ? "visible" : "hidden"}
+        variants={itemVariants}
+        id="pauta-publicitaria"
+        className="flex flex-col-reverse lg:flex-row items-center justify-between content-container px-6 py-16 mx-auto max-w-7xl"
+      >
         <div className="w-full flex items-center justify-center">
           <Image
             src={PautaPublicitariaImage}
@@ -330,9 +395,16 @@ function Services() {
             Contratar Servicio
           </motion.a>
         </div>
-      </div>
+      </motion.div>
 
-      <div id="diseño-integral" className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between content-container px-6 py-16 mx-auto max-w-7xl">
+      <motion.div
+        ref={ref5}
+        initial="hidden"
+        animate={inView5 ? "visible" : "hidden"}
+        variants={itemVariants}
+        id="diseño-integral"
+        className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between content-container px-6 py-16 mx-auto max-w-7xl"
+      >
         <div className="w-full flex items-center justify-center">
           <Image
             src={DisenoIntegral}
@@ -391,7 +463,77 @@ function Services() {
             Contratar Servicio
           </motion.a>
         </div>
-      </div>
+      </motion.div>
+
+      <motion.div
+        ref={ref6}
+        initial="hidden"
+        animate={inView6 ? "visible" : "hidden"}
+        variants={itemVariants}
+        id="tienda-nube"
+        className="flex flex-col-reverse lg:flex-row items-center justify-between content-container px-6 py-16 mx-auto max-w-7xl"
+      >
+        <div className="w-full flex items-center justify-center">
+          <Image
+            src={TiendaNubeImage}
+            alt="Tienda Nube"
+            width={450}
+            height={450}
+            className="mt-12 lg:mt-0"
+          />
+        </div>
+        <div className="w-full flex flex-col items-start text-left">
+          <div className="flex flex-row items-center space-x-3">
+            <span className="inline-block border-2 p-2 border-neutral-400 rounded-lg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="30"
+                height="30"
+                color="#2D29C2"
+                fill="none"
+              >
+                <path
+                  d="M17.4776 10.0001C17.485 10 17.4925 10 17.5 10C19.9853 10 22 12.0147 22 14.5C22 16.9853 19.9853 19 17.5 19H7C4.23858 19 2 16.7614 2 14C2 11.4003 3.98398 9.26407 6.52042 9.0227M17.4776 10.0001C17.4924 9.83536 17.5 9.66856 17.5 9.5C17.5 6.46243 15.0376 4 12 4C9.12324 4 6.76233 6.20862 6.52042 9.0227M17.4776 10.0001C17.3753 11.1345 16.9286 12.1696 16.2428 13M6.52042 9.0227C6.67826 9.00768 6.83823 9 7 9C8.12582 9 9.16474 9.37209 10.0005 10"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <h2 className="text-3xl lg:text-4xl text-black font-bold pt-2">
+              Tienda Nube
+            </h2>
+          </div>
+          <p className="pt-6 font-medium text-lg text-neutral-600">
+            Creamos de cero, configuramos y adaptamos tu Tienda Nube para que
+            potencies tus ventas online.
+          </p>
+          <p className="py-4 text-base text-neutral-500">
+            - Configuraciones de dominio
+          </p>
+          <p className="pb-4 text-base text-neutral-500">
+            - Configuraciones de métodos de pagos y envíos
+          </p>
+          <p className="pb-4 text-base text-neutral-500">
+            - Diseño integral para su personalización
+          </p>
+          <p className="pb-4 text-base text-neutral-500">
+            - Carga y configurar de productos, categorías y subcategorías
+          </p>
+          <p className="pb-4 text-base text-neutral-500">Y más!</p>
+
+          <motion.a
+            href="/contact"
+            className="rounded-md bg-blue-800 p-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+            whileHover={{ scale: 1.05, backgroundColor: "#2D29C2" }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            Contratar Servicio
+          </motion.a>
+        </div>
+      </motion.div>
     </div>
   );
 }

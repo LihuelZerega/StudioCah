@@ -6,8 +6,14 @@ import HeroMockupDesktop from "@/images/HeroDesktop.png";
 
 export default function HeroSection() {
   return (
-    <div>
-      <section className="bg-neutral-900">
+    <div
+      className="min-h-screen bg-cover"
+      style={{
+        backgroundImage:
+          "url('https://res.cloudinary.com/dys0jotat/image/upload/v1722538690/HeroHomeBg_gepdmi.png')",
+      }}
+    >
+      <section className="min-h-screen">
         <div className="container px-6 pt-36 lg:pt-40 mx-auto text-center">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl font-bold text-white lg:text-6xl">
