@@ -1,5 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import PortfolioPlumaBlanca from "@/images/PortfolioPlumaBlanca.png"
+import PortfolioMarisaP from  "@/images/PortfolioMarisaP.png"
+import PortfolioImportadosSanta from  "@/images/PortfolioSantaImportados.png"
+import PortfolioLala from "@/images/PortfolioLala.png"
+import PortfolioRvConstructora from "@/images/PortfolioRvConstructora.png"
+import PortfolioLabios from "@/images/PortfolioLabios.png"
 
 function Portfolio() {
   return (
@@ -22,39 +28,30 @@ function Portfolio() {
         <div className="flex flex-col gap-8 w-full">
           <div className="bg-black h-full lg:h-5/6 rounded-xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1503256207526-0d5d80fa2f47?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={PortfolioLala}
               width={390}
               height={300}
               alt=""
               className="rounded-xl object-cover w-full h-full opacity-70"
             />
             <div className="absolute bottom-0 left-0 p-4 bg- bg-blur bg-opacity-50 text-white">
-              <p className="font-semibold text-xl">In the mountains</p>
+              <p className="font-semibold text-xl">Lala</p>
               <p className="font-normal text-sm text-neutral-200 mt-2">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
-                voluptatibus nostrum quas at commodi, eveniet placeat quaerat,
-                distinctio culpa doloremque pariatur. Expedita ut soluta odit
-                sint, veniam harum voluptate non.
+                
               </p>
             </div>
           </div>
 
           <div className="bg-black h-full lg:h-6/6 rounded-xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1503256207526-0d5d80fa2f47?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={PortfolioMarisaP}
               width={390}
               height={300}
               alt=""
               className="rounded-xl object-cover w-full h-full opacity-70"
             />
             <div className="absolute bottom-0 left-0 p-4 text-white">
-              <p className="font-semibold text-xl">In the mountains</p>
-              <p className="font-normal text-sm text-neutral-200 mt-2">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
-                voluptatibus nostrum quas at commodi, eveniet placeat quaerat,
-                distinctio culpa doloremque pariatur. Expedita ut soluta odit
-                sint, veniam harum voluptate non.
-              </p>
+              <p className="font-semibold text-xl">Marisa Peraggini - Estudio Inmobiliario</p>
             </div>
           </div>
         </div>
@@ -62,38 +59,38 @@ function Portfolio() {
         <div className="flex flex-col gap-8 w-full">
           <div className="bg-black h-full lg:h-4/6 rounded-xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1503256207526-0d5d80fa2f47?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={PortfolioPlumaBlanca}
               width={390}
               height={300}
               alt=""
               className="rounded-xl object-cover w-full h-full opacity-70"
             />
             <div className="absolute bottom-0 left-0 p-4 text-white">
-              <p className="font-semibold text-xl">In the mountains</p>
-              <p className="font-normal text-sm text-neutral-200 mt-2">
+              <p className="font-semibold text-xl">Pluma Blanca</p>
+              {/* <p className="font-normal text-sm text-neutral-200 mt-2">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
                 voluptatibus nostrum quas at commodi, eveniet placeat quaerat,
                 distinctio culpa doloremque pariatur. Expedita ut soluta odit
                 sint, veniam harum voluptate non.
-              </p>
+              </p> */}
             </div>
           </div>
           <div className="bg-black h-full lg:h-2/6 rounded-xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1503256207526-0d5d80fa2f47?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={PortfolioRvConstructora}
               width={390}
               height={300}
               alt=""
               className="rounded-xl object-cover w-full h-full opacity-70"
             />
             <div className="absolute bottom-0 left-0 p-4 text-white">
-              <p className="font-semibold text-xl">In the mountains</p>
-              <p className="font-normal text-sm text-neutral-200 mt-2">
+              <p className="font-semibold text-xl">Rv Constructora</p>
+              {/* <p className="font-normal text-sm text-neutral-200 mt-2">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
                 voluptatibus nostrum quas at commodi, eveniet placeat quaerat,
                 distinctio culpa doloremque pariatur. Expedita ut soluta odit
                 sint, veniam harum voluptate non.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
@@ -101,38 +98,38 @@ function Portfolio() {
         <div className="flex flex-col gap-8 w-full">
           <div className="bg-black h-full lg:h-2/6 rounded-xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1503256207526-0d5d80fa2f47?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={PortfolioImportadosSanta}
               width={390}
               height={300}
               alt=""
               className="rounded-xl object-cover w-full h-full opacity-70"
             />
             <div className="absolute bottom-0 left-0 p-4 text-white">
-              <p className="font-semibold text-xl">In the mountains</p>
-              <p className="font-normal text-sm text-neutral-200 mt-2">
+              <p className="font-semibold text-xl">Importados Santa - Tienda Online</p>
+              {/* <p className="font-normal text-sm text-neutral-200 mt-2">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
                 voluptatibus nostrum quas at commodi, eveniet placeat quaerat,
                 distinctio culpa doloremque pariatur. Expedita ut soluta odit
                 sint, veniam harum voluptate non.
-              </p>
+              </p> */}
             </div>
           </div>
           <div className="bg-black h-full lg:h-4/6 rounded-xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1503256207526-0d5d80fa2f47?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={PortfolioLabios}
               width={390}
               height={300}
               alt=""
               className="rounded-xl object-cover w-full h-full opacity-70"
             />
             <div className="absolute bottom-0 left-0 p-4 text-white">
-              <p className="font-semibold text-xl">In the mountains</p>
-              <p className="font-normal text-sm text-neutral-200 mt-2">
+              <p className="font-semibold text-xl">D Enclat</p>
+              {/* <p className="font-normal text-sm text-neutral-200 mt-2">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
                 voluptatibus nostrum quas at commodi, eveniet placeat quaerat,
                 distinctio culpa doloremque pariatur. Expedita ut soluta odit
                 sint, veniam harum voluptate non.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
