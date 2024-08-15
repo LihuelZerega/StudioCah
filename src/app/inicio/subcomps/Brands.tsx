@@ -5,6 +5,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import BlurFade from "@/components/BlurFade";
+
 import Logo1 from "@/images/Brands/Logo1.png";
 import Logo2 from "@/images/Brands/Logo2.png";
 import Logo3 from "@/images/Brands/Logo3.png";
@@ -70,7 +72,7 @@ function Brands() {
         potencial.
       </p>
 
-      <div className="block lg:hidden max-w-7xl py-16 md:my-20 px-6 lg:px-8 shadow-sm">
+      <BlurFade inView className="block lg:hidden max-w-7xl py-16 md:my-20 px-6 lg:px-8 shadow-sm">
         <div className="relative w-full max-w-lg mx-auto overflow-hidden">
           <Slider {...settingsMobile}>
             {logos.map((image) => (
@@ -88,9 +90,9 @@ function Brands() {
             ))}
           </Slider>
         </div>
-      </div>
+      </BlurFade>
 
-      <div className="hidden lg:block py-16 px-6 lg:px-8 shadow-sm">
+      <BlurFade inView className="hidden lg:block py-16 px-6 lg:px-8 shadow-sm">
         <div className="relative w-full mx-auto overflow-hidden">
           <Slider {...settingsDesktop}>
             {logos.map((image) => (
@@ -108,7 +110,7 @@ function Brands() {
             ))}
           </Slider>
         </div>
-      </div>
+      </BlurFade>
     </>
   );
 }

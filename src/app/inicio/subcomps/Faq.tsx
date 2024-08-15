@@ -33,6 +33,11 @@ const faqItems: FAQItem[] = [
     answer:
       "Creamos y gestionamos campañas en Meta Ads, optimizando segmentación, presupuesto y contenido para maximizar el impacto y proporcionar informes detallados del rendimiento.",
   },
+  {
+    question: "¿Por qué tener un sitio web e-commerce?",
+    answer:
+      "Una tienda online te permite vender tus productos/servicios de una forma simple, en línea y con una gran expansión. En Studio Cah comfiguramos y personalizamos tu Tienda Nube para que aumentes tus ventas y expandas tu negocio.",
+  },
 ];
 
 const variants = {

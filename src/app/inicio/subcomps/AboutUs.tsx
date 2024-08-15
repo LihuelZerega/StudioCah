@@ -1,38 +1,18 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
+import BlurFade from "@/components/BlurFade";
 import { GoArrowUpRight } from "react-icons/go";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import AboutUsImage from "@/images/InicioSobreNosotros.png";
 
 const AboutUs = () => {
-  const controls = useAnimation();
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
-
-  const variants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
-
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={variants}
-      className="flex flex-col-reverse lg:flex-row items-center justify-between content-container px-6 py-10 mx-auto max-w-7xl"
-    >
-      <motion.div className="w-full flex items-center justify-center" variants={variants}>
+    <div className="flex flex-col-reverse lg:flex-row items-center justify-between content-container px-6 py-10 mx-auto max-w-7xl">
+      <BlurFade inView delay={0.25} className="w-full flex items-center justify-center">
         <Image src={AboutUsImage} alt="About Us" width={450} height={450} />
-      </motion.div>
-      <motion.div className="w-full flex flex-col items-center lg:items-start text-center lg:text-left" variants={variants}>
+      </BlurFade>
+
+      <BlurFade inView delay={0.50} className="w-full flex flex-col items-center lg:items-start text-center lg:text-left">
         <h3 className="text-orange-500 font-semibold">SOBRE NOSOTROS</h3>
         <h2 className="text-3xl lg:text-4xl text-black font-bold pt-2">
           Sobre StudioCah_la.
@@ -50,11 +30,11 @@ const AboutUs = () => {
         >
           Ver más
           <span>
-            <GoArrowUpRight className="text-lg"/>
+            <GoArrowUpRight className="text-lg" />
           </span>
         </a>
-      </motion.div>
-    </motion.div>
+      </BlurFade>
+    </div>
   );
 };
 

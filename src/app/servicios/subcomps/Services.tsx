@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
 import Image from "next/image";
-import { GoArrowUpRight } from "react-icons/go";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import BrandingImage from "@/images/Branding.png";
@@ -25,11 +24,6 @@ function Services() {
       controls.start("visible");
     }
   }, [controls, inView]);
-
-  const variants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
 
   const [ref1, inView1] = useInView({
     triggerOnce: true,
@@ -60,6 +54,68 @@ function Services() {
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  const phoneNumber = "5491134514873";
+  const Brandingmessage = encodeURIComponent(
+    "Hola, estoy interesado en adquirir el servicio de branding para mi negocio."
+  );
+  const SocialMediaMessage = encodeURIComponent(
+    "Hola, estoy interesado en adquirir el servicio de social media para mi marca."
+  );
+  const PautaPublicitariaMessage = encodeURIComponent(
+    "Hola, estoy interesado en adquirir el servicio de pauta publicitaria para mi marca."
+  );
+  const AsesoriaPersonalizadaMessage = encodeURIComponent(
+    "Hola, estoy interesado en agendar una asesoria personalizada para mi marca."
+  );
+  const DisenoIntegralMessage = encodeURIComponent(
+    "Hola, estoy interesado en adquirir el servicio de diseño integral para mi marca."
+  );
+  const TiendaNubeMessage = encodeURIComponent(
+    "Hola, estoy interesado en adquirir una tienda nube para mi marca."
+  );
+
+  const BrandinghandleClick = () => {
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${Brandingmessage}`,
+      "_blank"
+    );
+  };
+
+  const SocialMediahandleClick = () => {
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${SocialMediaMessage}`,
+      "_blank"
+    );
+  };
+
+  const PautaPublicitariahandleClick = () => {
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${PautaPublicitariaMessage}`,
+      "_blank"
+    );
+  };
+
+  const AsesoriaPersonalizadahandleClick = () => {
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${AsesoriaPersonalizadaMessage}`,
+      "_blank"
+    );
+  };
+
+  const DisenoIntegralhandleClick = () => {
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${DisenoIntegralMessage}`,
+      "_blank"
+    );
+  };
+
+  const TiendaNubehandleClick = () => {
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${TiendaNubeMessage}`,
+      "_blank"
+    );
+  };
 
   return (
     <div>
@@ -137,14 +193,14 @@ function Services() {
             de la marca, sino que también generen impacto positivo y contribuyan
             al crecimiento sostenible del cliente en el mercado.
           </p>
-          <motion.a
-            href="/contact"
+          <motion.button
+            onClick={BrandinghandleClick}
             className="rounded-md bg-orange-500 p-3 text-sm font-semibold text-white shadow-sm hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
             whileHover={{ scale: 1.05, backgroundColor: "#ff7849" }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             Contratar Servicio
-          </motion.a>
+          </motion.button>
         </div>
       </motion.div>
 
@@ -229,14 +285,14 @@ function Services() {
             cultivamos relaciones significativas con la audiencia, impulsando el
             crecimiento y la fidelización de la base de seguidores{" "}
           </p>
-          <motion.a
-            href="/contact"
+          <motion.button
+            onClick={SocialMediahandleClick}
             className="rounded-md bg-blue-800 p-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             whileHover={{ scale: 1.05, backgroundColor: "#2D29C2" }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             Contratar Servicio
-          </motion.a>
+          </motion.button>
         </div>
       </motion.div>
 
@@ -302,14 +358,14 @@ function Services() {
             proporcionamos recomendaciones y acciones concretas para potenciar
             tu visibilidad y maximizar tu impacto en el mercado digital.
           </p>
-          <motion.a
-            href="/contact"
+          <motion.button
+            onClick={PautaPublicitariahandleClick}
             className="rounded-md bg-orange-500 p-3 text-sm font-semibold text-white shadow-sm hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
             whileHover={{ scale: 1.05, backgroundColor: "#ff7849" }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             Contratar Servicio
-          </motion.a>
+          </motion.button>
         </div>
       </motion.div>
 
@@ -386,14 +442,14 @@ function Services() {
             inversiones publicitarias.
           </p>
 
-          <motion.a
-            href="/contact"
+          <motion.button
+            onClick={AsesoriaPersonalizadahandleClick}
             className="rounded-md bg-blue-800 p-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             whileHover={{ scale: 1.05, backgroundColor: "#2D29C2" }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             Contratar Servicio
-          </motion.a>
+          </motion.button>
         </div>
       </motion.div>
 
@@ -454,14 +510,14 @@ function Services() {
             centra en la estética, sino también en la funcionalidad y el impacto
             visual que cada diseño puede generar en tu audiencia.
           </p>
-          <motion.a
-            href="/contact"
+          <motion.button
+            onClick={DisenoIntegralhandleClick}
             className="rounded-md bg-orange-500 p-3 text-sm font-semibold text-white shadow-sm hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
             whileHover={{ scale: 1.05, backgroundColor: "#ff7849" }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             Contratar Servicio
-          </motion.a>
+          </motion.button>
         </div>
       </motion.div>
 
@@ -524,14 +580,14 @@ function Services() {
           </p>
           <p className="pb-4 text-base text-neutral-500">Y más!</p>
 
-          <motion.a
-            href="/contact"
+          <motion.button
+            onClick={TiendaNubehandleClick}
             className="rounded-md bg-blue-800 p-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             whileHover={{ scale: 1.05, backgroundColor: "#2D29C2" }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             Contratar Servicio
-          </motion.a>
+          </motion.button>
         </div>
       </motion.div>
     </div>

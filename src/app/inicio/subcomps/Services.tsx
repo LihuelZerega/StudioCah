@@ -1,24 +1,12 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
-
-const variants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0 },
-};
+import BlurFade from "@/components/BlurFade";
 
 function Services() {
   return (
     <section className="content-container px-6 py-10 mx-auto max-w-7xl">
       <div className="flex flex-col items-center container px-6 py-10 mx-auto">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-          variants={variants}
-          className="w-full"
-        >
+        <BlurFade inView className="w-full">
           <p className="text-center text-base font-bold text-orange-500 uppercase tracking-wider mb-2">
             SERVICIOS
           </p>
@@ -26,9 +14,9 @@ function Services() {
             Marcá la diferencia en tu negocio
             <br /> con Studio Cah
           </h2>
-        </motion.div>
+        </BlurFade>
 
-        <div className="w-full mx-auto">
+        <BlurFade inView className="w-full mx-auto">
           <div className="flex flex-col gap-4 mt-8 xl:mt-12 xl:gap-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <a
@@ -280,7 +268,7 @@ function Services() {
               </a>
             </div>
           </div>
-        </div>
+        </BlurFade>
       </div>
     </section>
   );

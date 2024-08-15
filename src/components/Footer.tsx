@@ -117,18 +117,12 @@ function Footer() {
             </p>
 
             <div className="flex flex-col items-start mt-5 space-y-2">
-              <a
-                href="#"
-                className="text-neutral-300 transition-colors duration-300 hover:underline hover:text-blue-500"
-              >
-                +54 9 11 2345-6789
-              </a>
-              <a
-                href="#"
-                className="text-neutral-300 transition-colors duration-300 hover:underline hover:text-blue-500"
-              >
-                info@studio-cah.com
-              </a>
+              <p className="text-neutral-300 transition-colors duration-300 hover:underline hover:text-blue-500">
+                +54 9 11 3451-4873
+              </p>
+              <p className="text-neutral-300 transition-colors duration-300 hover:underline hover:text-blue-500">
+                info.studiocah@gmail.com
+              </p>
               <a
                 href="https://www.instagram.com/studiocah_la/"
                 className="text-neutral-300 transition-colors duration-300 hover:underline hover:text-blue-500"
