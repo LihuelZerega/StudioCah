@@ -3,14 +3,13 @@ import Image from "next/image";
 import RvConstructora1 from "@/images/RvConstructora/RvConstructora1.png";
 import RvConstructora2 from "@/images/RvConstructora/RvConstructora2.png";
 import RvConstructora3 from "@/images/RvConstructora/RvConstructora3.png";
-import RvConstructora4 from "@/images/RvConstructora/RvConstructora4.png";
 import RvConstructora5 from "@/images/RvConstructora/RvConstructora5.png";
 import RvConstructora7 from "@/images/RvConstructora/RvConstructora7.png";
 import RvConstructora8 from "@/images/RvConstructora/RvConstructora8.png";
 import RvConstructora9 from "@/images/RvConstructora/RvConstructora9.png";
 import RvConstructora10 from "@/images/RvConstructora/RvConstructora10.png";
 
-const images = [RvConstructora1, RvConstructora2, RvConstructora3, RvConstructora4, RvConstructora5, RvConstructora7, RvConstructora8, RvConstructora9, RvConstructora10];
+const images = [RvConstructora1, RvConstructora2, RvConstructora3, RvConstructora5, RvConstructora7, RvConstructora8, RvConstructora9, RvConstructora10];
 
 function RvConstructoraCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
