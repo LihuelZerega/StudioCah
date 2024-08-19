@@ -7,36 +7,36 @@ import "slick-carousel/slick/slick-theme.css";
 
 import BlurFade from "@/components/BlurFade";
 
-import Logo1 from "@/images/Brands/Logo1.png";
+// import Logo1 from "@/images/Brands/Logo1.png";
 import Logo2 from "@/images/Brands/Logo2.png";
 import Logo3 from "@/images/Brands/Logo3.png";
 import Logo4 from "@/images/Brands/Logo4.png";
-import Logo5 from "@/images/Brands/Logo5.png";
-import Logo6 from "@/images/Brands/Logo6.png";
+// import Logo5 from "@/images/Brands/Logo5.png";
+// import Logo6 from "@/images/Brands/Logo6.png";
 import Logo7 from "@/images/Brands/Logo7.png";
 import Logo8 from "@/images/Brands/Logo8.png";
-import Logo9 from "@/images/Brands/Logo9.png";
-import Logo10 from "@/images/Brands/Logo10.png";
+// import Logo9 from "@/images/Brands/Logo9.png";
+// import Logo10 from "@/images/Brands/Logo10.png";
 import Logo11 from "@/images/Brands/Logo11.png";
 import Logo12 from "@/images/Brands/Logo12.png";
-import Logo13 from "@/images/Brands/Logo13.png";
-import Logo14 from "@/images/Brands/Logo14.png";
+// import Logo13 from "@/images/Brands/Logo13.png";
+// import Logo14 from "@/images/Brands/Logo14.png";
 
 const logos = [
-  { id: 1, src: Logo1, alt: "logo1" },
+  // { id: 1, src: Logo1, alt: "logo1" },
   { id: 2, src: Logo2, alt: "logo2" },
   { id: 3, src: Logo3, alt: "logo3" },
   { id: 4, src: Logo4, alt: "logo4" },
-  { id: 5, src: Logo5, alt: "logo5" },
-  { id: 6, src: Logo6, alt: "logo6" },
+  // { id: 5, src: Logo5, alt: "logo5" },
+  // { id: 6, src: Logo6, alt: "logo6" },
   { id: 7, src: Logo7, alt: "logo7" },
   { id: 8, src: Logo8, alt: "logo8" },
-  { id: 9, src: Logo9, alt: "logo9" },
-  { id: 10, src: Logo10, alt: "logo10" },
+  // { id: 9, src: Logo9, alt: "logo9" },
+  // { id: 10, src: Logo10, alt: "logo10" },
   { id: 11, src: Logo11, alt: "logo11" },
   { id: 12, src: Logo12, alt: "logo12" },
-  { id: 13, src: Logo13, alt: "logo13" },
-  { id: 14, src: Logo14, alt: "logo14" },
+  // { id: 13, src: Logo13, alt: "logo13" },
+  // { id: 14, src: Logo14, alt: "logo14" },
 ];
 
 function Brands() {
