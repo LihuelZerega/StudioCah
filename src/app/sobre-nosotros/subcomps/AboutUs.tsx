@@ -35,7 +35,7 @@ function AboutUs() {
   });
 
   return (
-    <div className="w-full py-10 bg-white sm:py-16 lg:py-24 mx-auto max-w- grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 px-3 lg:px-6">
+    <div className="w-full py-10 bg-white sm:py-16 lg:py-24 mx-auto flex flex-col lg:flex-row items-start justify-center gap-12 px-3 lg:px-6">
       <motion.div
         ref={ref1}
         initial="hidden"
@@ -68,6 +68,7 @@ function AboutUs() {
           línea.
         </p>
       </motion.div>
+
       <motion.div
         ref={ref2}
         initial="hidden"
@@ -157,6 +158,7 @@ function AboutUs() {
           necesidades específicas.
         </p>
       </motion.div>
+
       <motion.div
         ref={ref3}
         initial="hidden"
