@@ -228,7 +228,7 @@ function Portfolio() {
               className="rounded-xl object-cover w-full h-full opacity-70"
             />
             <div className="absolute bottom-0 left-0 p-4 text-white">
-              <p className="font-semibold text-xl">D Enclat</p>
+              <p className="font-semibold text-xl">D Eclat</p>
             </div>
 
             <Modal
@@ -241,7 +241,7 @@ function Portfolio() {
                 {(onClose) => (
                   <>
                     <ModalHeader className="flex flex-col gap-1 text-neutral-800">
-                      D Enclat
+                      D Eclat
                     </ModalHeader>
                     <ModalBody>
                       <DenclatCarousel />
