@@ -48,7 +48,7 @@ function Testimonials() {
                   <div className="flex items-center">
                     <div className="ml-3">
                       <p className="text-base font-semibold text-neutral-800 truncate">
-                        Aqua Di Roma
+                        Oscar Daniel Gonzalez
                       </p>
                     </div>
                   </div>
@@ -74,7 +74,7 @@ function Testimonials() {
                   <div className="flex items-center">
                     <div className="min-w-0 ml-3">
                       <p className="text-base font-semibold text-neutral-800 truncate">
-                        Pluma Blanca
+                        Silvana Delfino
                       </p>
                     </div>
                   </div>
@@ -99,7 +99,7 @@ function Testimonials() {
                   <div className="flex items-center">
                     <div className="min-w-0 ml-3">
                       <p className="text-base font-semibold text-neutral-800 truncate">
-                        Essen
+                        Joaquin Prieto
                       </p>
                     </div>
                   </div>
@@ -124,7 +124,7 @@ function Testimonials() {
                   <div className="flex items-center">
                     <div className="min-w-0 ml-3">
                       <p className="text-base font-semibold text-neutral-800 truncate">
-                        Merci
+                        Bruno Barreto
                       </p>
                     </div>
                   </div>
@@ -150,7 +150,7 @@ function Testimonials() {
                   <div className="flex items-center">
                     <div className="min-w-0 ml-3">
                       <p className="text-base font-semibold text-neutral-800 truncate">
-                        Euphemia
+                        Joaquin Luna
                       </p>
                     </div>
                   </div>
@@ -175,7 +175,7 @@ function Testimonials() {
                   <div className="flex items-center">
                     <div className="min-w-0 ml-3">
                       <p className="text-base font-semibold text-neutral-800 truncate">
-                        Amora
+                        Santiago Castrillo
                       </p>
                     </div>
                   </div>

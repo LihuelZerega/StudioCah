@@ -46,7 +46,7 @@ function Footer() {
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <div>
-            <p className="font-semibold text-neutral-800 dark:text-white">
+            <p className="font-semibold text-white">
               Services
             </p>
 
@@ -85,7 +85,7 @@ function Footer() {
           </div>
 
           <div>
-            <p className="font-semibold text-neutral-800 dark:text-white">
+            <p className="font-semibold text-white">
               Sobre Nosotros
             </p>
 
@@ -112,7 +112,7 @@ function Footer() {
           </div>
 
           <div>
-            <p className="font-semibold text-neutral-800 dark:text-white">
+            <p className="font-semibold text-white">
               Contacto
             </p>
 
@@ -127,8 +127,9 @@ function Footer() {
                 href="https://www.instagram.com/studiocah_la/"
                 className="text-neutral-300 transition-colors duration-300 hover:underline hover:text-blue-500"
               >
-                @studiocah_la
+                Instagram: @studiocah_la
               </a>
+              <a href="https://www.tiktok.com/@studiocah_">TikTok: @studiocah_</a>
             </div>
           </div>
         </div>
