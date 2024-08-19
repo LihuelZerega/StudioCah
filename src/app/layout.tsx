@@ -16,6 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <script
+        defer
+        src="https://digincreasemetrics.up.railway.app/script.js"
+        data-website-id="b61df03b-3126-46db-acac-fbe4925d522f"
+      ></script>
       <body className={inter.className}>{children}</body>
     </html>
   );
