@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.1.2",
+    "@heroicons/react": "^2.1.5",
     "@nextui-org/modal": "^2.0.39",
     "@nextui-org/react": "^2.4.6",
     "framer-motion": "^11.3.9",
