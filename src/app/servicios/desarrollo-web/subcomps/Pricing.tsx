@@ -1,7 +1,29 @@
-import React from "react";
+"use client";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import BlurFade from "@/components/BlurFade";
 
-function Pricing() {
+interface PriceModel {
+  id: number;
+  name: string;
+  priceArgentina: number;
+  priceUSA: number;
+}
+
+const Pricing: React.FC = () => {
+  const [prices, setPrices] = useState<PriceModel[]>([]);
+
+  useEffect(() => {
+    axios
+      .get("https://digincrease-api-production.up.railway.app/api/studiocah")
+      .then((response) => {
+        setPrices(response.data);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the prices!", error);
+      });
+  }, []);
+
   return (
     <div>
       <div className="overflow-hidden">
@@ -23,10 +45,9 @@ function Pricing() {
                   </div>
 
                   <div className="mt-5">
-                    <span className="text-6xl md:text-3xl font-bold text-gray-800">
-                      $180.000
+                    <span className="text-4xl md:text-3xl font-bold text-gray-800">
+                      {prices[0]?.priceArgentina}
                     </span>
-                    <span className="text-lg font-bold text-gray-800">.99</span>
                     <span className="ms-1 text-gray-500">ARS / Pago único</span>
                   </div>
 
@@ -55,10 +76,9 @@ function Pricing() {
                   </span>
 
                   <div className="mt-5">
-                    <span className="text-6xl md:text-3xl font-bold text-gray-800">
-                      $180.000
+                    <span className="text-4xl md:text-3xl font-bold text-gray-800">
+                    {prices[1]?.priceArgentina}
                     </span>
-                    <span className="text-lg font-bold text-gray-800">.99</span>
                     <span className="ms-1 text-gray-500">ARS / Pago único</span>
                   </div>
 
@@ -86,7 +106,7 @@ function Pricing() {
                   </div>
 
                   <div className="mt-5">
-                    <span className="text-6xl md:text-3xl font-bold text-gray-800">
+                    <span className="text-4xl md:text-3xl font-bold text-gray-800">
                       $180.000
                     </span>
                     <span className="text-lg font-bold text-gray-800">.99</span>
@@ -115,10 +135,9 @@ function Pricing() {
                   </div>
 
                   <div className="mt-5">
-                    <span className="text-6xl md:text-3xl font-bold text-gray-800">
-                      $180.000
+                    <span className="text-4xl md:text-3xl font-bold text-gray-800">
+                      {prices[2]?.priceArgentina}
                     </span>
-                    <span className="text-lg font-bold text-gray-800">.99</span>
                     <span className="ms-1 text-gray-500">ARS / Pago único</span>
                   </div>
 
@@ -197,7 +216,7 @@ function Pricing() {
     </div>
 
     <div className="hidden lg:block sticky top-0 start-0 py-2 bg-white/60 backdrop-blur-md">
-      <div className="grid grid-cols-6 gap-6">
+      <div className="grid grid-cols-5 gap-6">
         <div className="col-span-2">
           <span className="font-semibold text-lg text-gray-800">
           Características
@@ -224,15 +243,6 @@ function Pricing() {
 
         <div className="col-span-1">
           <span className="font-semibold text-lg text-gray-800">
-          Tienda Nube
-          </span>
-          <p className="mt-2 text-sm text-gray-500">
-          Mantenimiento y soporte: $12.000/mes
-          </p>
-        </div>
-
-        <div className="col-span-1">
-          <span className="font-semibold text-lg text-gray-800">
           Tienda Online
           </span>
           <p className="mt-2 text-sm text-gray-500">
@@ -243,7 +253,7 @@ function Pricing() {
     </div>
 
     <div className="space-y-4 lg:space-y-0">
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 lg:py-3">
           <span className="text-lg font-semibold text-gray-800">
             General
@@ -263,7 +273,7 @@ function Pricing() {
         </li>
       </ul>
 
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 pb-1.5 lg:py-3">
           <span className="font-semibold lg:font-normal text-sm text-gray-800">
           Número de páginas
@@ -295,17 +305,6 @@ function Pricing() {
         <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
             <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
-              Tienda Nube
-            </span>
-            <span className="text-sm text-gray-800">
-              
-            </span>
-          </div>
-        </li>
-
-        <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
-            <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
               Tienda Online
             </span>
             <span className="text-sm text-gray-800">
@@ -315,7 +314,7 @@ function Pricing() {
         </li>
       </ul>
 
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 pb-1.5 lg:py-3">
           <span className="font-semibold lg:font-normal text-sm text-gray-800">
           Diseño y desarrollo personalizado
@@ -343,15 +342,6 @@ function Pricing() {
         <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
             <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
-              Tienda Nube
-            </span>
-            {/* <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> */}
-          </div>
-        </li>
-
-        <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
-            <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
               Tienda Online
             </span>
             <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -359,7 +349,7 @@ function Pricing() {
         </li>
       </ul>
 
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 pb-1.5 lg:py-3">
           <span className="font-semibold lg:font-normal text-sm text-gray-800">
           Comisión por Ventas
@@ -387,15 +377,6 @@ function Pricing() {
         <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
             <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
-              Tienda Nube
-            </span>
-            {/* <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> */}
-          </div>
-        </li>
-
-        <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
-            <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
               Tienda Online
             </span>
             <svg className="shrink-0 size-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
@@ -405,7 +386,7 @@ function Pricing() {
     </div>
 
     <div className="mt-6 space-y-4 lg:space-y-0">
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 lg:py-3">
           <span className="text-lg font-semibold text-gray-800">
           Seguridad
@@ -425,7 +406,7 @@ function Pricing() {
         </li>
       </ul>
 
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 pb-1.5 lg:py-3">
           <span className="font-semibold lg:font-normal text-sm text-gray-800">
           Protección DDoS
@@ -457,17 +438,6 @@ function Pricing() {
         <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
             <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
-              Tienda Nube
-            </span>
-            <span className="text-sm text-gray-800">
-              
-            </span>
-          </div>
-        </li>
-
-        <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
-            <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
               Tienda Online
             </span>
             <span className="text-sm text-gray-800">
@@ -477,7 +447,7 @@ function Pricing() {
         </li>
       </ul>
 
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 pb-1.5 lg:py-3">
           <span className="font-semibold lg:font-normal text-sm text-gray-800">
           Firewall de aplicaciones web
@@ -505,15 +475,6 @@ function Pricing() {
         <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
             <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
-              Tienda Nube
-            </span>
-            {/* <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> */}
-          </div>
-        </li>
-
-        <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
-            <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
               Tienda Online
             </span>
             <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -521,7 +482,7 @@ function Pricing() {
         </li>
       </ul>
 
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 pb-1.5 lg:py-3">
           <span className="font-semibold lg:font-normal text-sm text-gray-800">
           Proteccion de privacidad de datos (GDPR)
@@ -549,15 +510,6 @@ function Pricing() {
         <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
             <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
-              Tienda Nube
-            </span>
-            {/* <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> */}
-          </div>
-        </li>
-
-        <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
-            <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
               Tienda Online
             </span>
             <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -565,7 +517,7 @@ function Pricing() {
         </li>
       </ul>
 
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 pb-1.5 lg:py-3">
           <span className="font-semibold lg:font-normal text-sm text-gray-800">
           Altos estándares de seguridad y disponibilidad (SOC 2)
@@ -593,15 +545,6 @@ function Pricing() {
         <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
             <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
-              Tienda Nube
-            </span>
-            {/* <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> */}
-          </div>
-        </li>
-
-        <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
-            <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
               Tienda Online
             </span>
             <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -609,7 +552,7 @@ function Pricing() {
         </li>
       </ul>
 
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 pb-1.5 lg:py-3">
           <span className="font-semibold lg:font-normal text-sm text-gray-800">
           Altos estándares de gestión de la seguridad de la información (ISO 27001)
@@ -637,15 +580,6 @@ function Pricing() {
         <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
             <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
-              Tienda Nube
-            </span>
-            {/* <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> */}
-          </div>
-        </li>
-
-        <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
-            <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
               Tienda Online
             </span>
             <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -655,7 +589,7 @@ function Pricing() {
     </div>
 
     <div className="mt-6 space-y-4 lg:space-y-0">
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 lg:py-3">
           <span className="text-lg font-semibold text-gray-800">
           Rendimiento
@@ -675,7 +609,7 @@ function Pricing() {
         </li>
       </ul>
 
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 pb-1.5 lg:py-3">
           <span className="font-semibold lg:font-normal text-sm text-gray-800">
           Distribución en una red global de servidores de alto rendimiento y baja latencia
@@ -703,15 +637,6 @@ function Pricing() {
         <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
             <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
-              Tienda Nube
-            </span>
-            {/* <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> */}
-          </div>
-        </li>
-
-        <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
-            <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
               Tienda Online
             </span>
             <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -719,7 +644,7 @@ function Pricing() {
         </li>
       </ul>
 
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 pb-1.5 lg:py-3">
           <span className="font-semibold lg:font-normal text-sm text-gray-800">
           Optimización de imágenes
@@ -747,15 +672,6 @@ function Pricing() {
         <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
             <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
-              Tienda Nube
-            </span>
-            {/* <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> */}
-          </div>
-        </li>
-
-        <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
-            <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
               Tienda Online
             </span>
             <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -763,7 +679,7 @@ function Pricing() {
         </li>
       </ul>
 
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 pb-1.5 lg:py-3">
           <span className="font-semibold lg:font-normal text-sm text-gray-800">
           Minificación y compresión de codigo
@@ -791,15 +707,6 @@ function Pricing() {
         <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
             <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
-              Tienda Nube
-            </span>
-            {/* <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> */}
-          </div>
-        </li>
-
-        <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
-            <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
               Tienda Online
             </span>
             <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -807,7 +714,7 @@ function Pricing() {
         </li>
       </ul>
 
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 pb-1.5 lg:py-3">
           <span className="font-semibold lg:font-normal text-sm text-gray-800">
           Almacenamiento en Caché para usuarios regresantes
@@ -835,15 +742,6 @@ function Pricing() {
         <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
             <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
-              Tienda Nube
-            </span>
-            {/* <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> */}
-          </div>
-        </li>
-
-        <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
-            <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
               Tienda Online
             </span>
             <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -851,7 +749,7 @@ function Pricing() {
         </li>
       </ul>
 
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 pb-1.5 lg:py-3">
           <span className="font-semibold lg:font-normal text-sm text-gray-800">
           Bases de datos de alto rendimiento y escalado automatico
@@ -879,15 +777,6 @@ function Pricing() {
         <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
             <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
-              Tienda Nube
-            </span>
-            {/* <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> */}
-          </div>
-        </li>
-
-        <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
-            <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
               Tienda Online
             </span>
             <svg className="shrink-0 size-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -897,7 +786,7 @@ function Pricing() {
     </div>
 
     <div className="mt-6 space-y-4 lg:space-y-0">
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 lg:py-3">
           <span className="text-lg font-semibold text-gray-800">
             Estructura y Caracteristicas
@@ -917,7 +806,7 @@ function Pricing() {
         </li>
       </ul>
 
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 pb-1.5 lg:py-3">
           <span className="font-semibold lg:font-normal text-sm text-gray-800">
           {/* Protección DDoS */}
@@ -949,17 +838,6 @@ function Pricing() {
         <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
             <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
-              Tienda Nube
-            </span>
-            <span className="text-sm text-gray-800">
-              
-            </span>
-          </div>
-        </li>
-
-        <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
-            <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
               Tienda Online
             </span>
             <span className="text-sm text-gray-800">
@@ -969,7 +847,7 @@ function Pricing() {
         </li>
       </ul>
 
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 pb-1.5 lg:py-3">
           <span className="font-semibold lg:font-normal text-sm text-gray-800">
           {/* Protección DDoS */}
@@ -1001,17 +879,6 @@ function Pricing() {
         <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
             <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
-              Tienda Nube
-            </span>
-            <span className="text-sm text-gray-800">
-              
-            </span>
-          </div>
-        </li>
-
-        <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
-            <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
               Tienda Online
             </span>
             <span className="text-sm text-gray-800">
@@ -1021,7 +888,7 @@ function Pricing() {
         </li>
       </ul>
 
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 pb-1.5 lg:py-3">
           <span className="font-semibold lg:font-normal text-sm text-gray-800">
           {/* Protección DDoS */}
@@ -1053,17 +920,6 @@ function Pricing() {
         <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
             <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
-              Tienda Nube
-            </span>
-            <span className="text-sm text-gray-800">
-              
-            </span>
-          </div>
-        </li>
-
-        <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
-            <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
               Tienda Online
             </span>
             <span className="text-sm text-gray-800">
@@ -1073,7 +929,7 @@ function Pricing() {
         </li>
       </ul>
 
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 pb-1.5 lg:py-3">
           <span className="font-semibold lg:font-normal text-sm text-gray-800">
           {/* Protección DDoS */}
@@ -1105,17 +961,6 @@ function Pricing() {
         <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
             <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
-              Tienda Nube
-            </span>
-            <span className="text-sm text-gray-800">
-              
-            </span>
-          </div>
-        </li>
-
-        <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
-            <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
               Tienda Online
             </span>
             <span className="text-sm text-gray-800">
@@ -1125,7 +970,7 @@ function Pricing() {
         </li>
       </ul>
 
-      <ul className="grid lg:grid-cols-6 lg:gap-6">
+      <ul className="grid lg:grid-cols-5 lg:gap-6">
         <li className="lg:col-span-2 pb-1.5 lg:py-3">
           <span className="font-semibold lg:font-normal text-sm text-gray-800">
           {/* Protección DDoS */}
@@ -1157,17 +1002,6 @@ function Pricing() {
         <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
           <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
             <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
-              Tienda Nube
-            </span>
-            <span className="text-sm text-gray-800">
-              
-            </span>
-          </div>
-        </li>
-
-        <li className="col-span-1 py-1.5 lg:py-3 border-b border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-6 lg:block">
-            <span className="lg:hidden md:col-span-2 text-sm text-gray-800">
               Tienda Online
             </span>
             <span className="text-sm text-gray-800">
@@ -1179,7 +1013,7 @@ function Pricing() {
     </div>
 
     <div className="hidden lg:block mt-6">
-      <div className="grid grid-cols-6 gap-6">
+      <div className="grid grid-cols-5 gap-6">
         <div className="col-span-2">
         </div>
 
@@ -1191,12 +1025,6 @@ function Pricing() {
 
         <div className="col-span-1">
           <a className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
-            Comprar Ahora
-          </a>
-        </div>
-
-        <div className="col-span-1">
-          <a className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50" href="#">
             Comprar Ahora
           </a>
         </div>
