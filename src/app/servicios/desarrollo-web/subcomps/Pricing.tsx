@@ -6,23 +6,39 @@ import BlurFade from "@/components/BlurFade";
 interface PriceModel {
   id: number;
   name: string;
-  priceArgentina: number;
   priceUSA: number;
+  priceArgentina: number;
 }
 
 const Pricing: React.FC = () => {
   const [prices, setPrices] = useState<PriceModel[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    axios
-      .get("https://digincrease-api-production.up.railway.app/api/studiocah")
-      .then((response) => {
+    const fetchPrices = async () => {
+      try {
+        const response = await axios.get('https://digincrease-api-production.up.railway.app/api/studiocah');
         setPrices(response.data);
-      })
-      .catch((error) => {
-        console.error("There was an error fetching the prices!", error);
-      });
+      } catch (error) {
+        setError('Error al cargar los precios');
+        console.error('There was an error fetching the prices!', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPrices();
   }, []);
+
+  if (loading) return <p>Cargando precios...</p>;
+  if (error) return <p>{error}</p>;
+
+  const getPriceByName = (name: string, field: 'priceUSA' | 'priceArgentina') =>
+    prices.find((p) => p.name === name)?.[field] || 0;
+
+  const formatPrice = (price: number) => 
+    new Intl.NumberFormat('es-AR').format(price);
 
   return (
     <div>
@@ -46,7 +62,7 @@ const Pricing: React.FC = () => {
 
                   <div className="mt-5">
                     <span className="text-4xl md:text-3xl font-bold text-gray-800">
-                      {prices[0]?.priceArgentina}
+                    <p>${formatPrice(getPriceByName('One Page', 'priceArgentina'))}</p>
                     </span>
                     <span className="ms-1 text-gray-500">ARS / Pago único</span>
                   </div>
@@ -77,7 +93,7 @@ const Pricing: React.FC = () => {
 
                   <div className="mt-5">
                     <span className="text-4xl md:text-3xl font-bold text-gray-800">
-                    {prices[1]?.priceArgentina}
+                    ${formatPrice(getPriceByName('Landing Page', 'priceArgentina'))}
                     </span>
                     <span className="ms-1 text-gray-500">ARS / Pago único</span>
                   </div>
@@ -136,7 +152,7 @@ const Pricing: React.FC = () => {
 
                   <div className="mt-5">
                     <span className="text-4xl md:text-3xl font-bold text-gray-800">
-                      {prices[2]?.priceArgentina}
+                    ${formatPrice(getPriceByName('E-commerce', 'priceArgentina'))}
                     </span>
                     <span className="ms-1 text-gray-500">ARS / Pago único</span>
                   </div>
