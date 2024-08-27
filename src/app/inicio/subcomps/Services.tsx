@@ -20,7 +20,7 @@ function Services() {
           <div className="flex flex-col gap-4 mt-8 xl:mt-12 xl:gap-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <a
-                href="/servicios#branding"
+                href="/servicios/impulsa-tu-marca/#branding"
                 className="p-8 space-y-3 border-2 border-neutral-500 border-opacity-70 rounded-xl transition-all duration-500 hover:scale-105"
               >
                 <span className="inline-block border-2 p-2 border-neutral-400 rounded-full">
@@ -65,7 +65,7 @@ function Services() {
               </a>
 
               <a
-                href="/servicios#social-media"
+                href="/servicios/impulsa-tu-marca/#social-media"
                 className="p-8 space-y-3 border-2 border-neutral-500 border-opacity-70 rounded-xl transition-all duration-500 hover:scale-105"
               >
                 <span className="inline-block border-2 p-2 border-neutral-400 rounded-full">
@@ -110,7 +110,7 @@ function Services() {
               </a>
 
               <a
-                href="/servicios#asesoria-personalizada"
+                href="/servicios/impulsa-tu-marca/#asesoria-personalizada"
                 className="p-8 space-y-3 border-2 border-neutral-500 border-opacity-70 rounded-xl transition-all duration-500 hover:scale-105"
               >
                 <span className="inline-block border-2 p-2 border-neutral-400 rounded-full">
@@ -152,7 +152,7 @@ function Services() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <a
-                href="/servicios#pauta-publicitaria"
+                href="/servicios/impulsa-tu-marca/#pauta-publicitaria"
                 className="w-fit p-8 space-y-3 border-2 border-neutral-500 border-opacity-70 rounded-xl transition-all duration-500 hover:scale-105"
               >
                 <span className="inline-block border-2 p-2 border-neutral-400 rounded-full">
@@ -201,7 +201,7 @@ function Services() {
               </a>
 
               <a
-                href="/servicios#diseño-integral"
+                href="/servicios/impulsa-tu-marca/#diseño-integral"
                 className="w-fit p-8 space-y-3 border-2 border-neutral-500 border-opacity-70 rounded-xl transition-all duration-500 hover:scale-105"
               >
                 <span className="inline-block border-2 p-2 border-neutral-400 rounded-full">
@@ -235,7 +235,7 @@ function Services() {
               </a>
 
               <a
-                href="/servicios#pauta-publicitaria"
+                href="/servicios/impulsa-tu-marca/#pauta-publicitaria"
                 className="w-fit p-8 space-y-3 border-2 border-neutral-500 border-opacity-70 rounded-xl transition-all duration-500 hover:scale-105"
               >
                 <span className="inline-block border-2 p-2 border-neutral-400 rounded-full">

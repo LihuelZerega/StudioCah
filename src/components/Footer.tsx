@@ -19,7 +19,7 @@ function Footer() {
 
           <div className="mt-6 md:mx-3 shrink-0 md:mt-0 md:w-auto">
             <a
-              href="/servicios"
+              href="/servicios/impulsa-tu-marca"
               className="inline-flex items-center justify-center w-full p-3 text-sm text-black font-bold duration-300 bg-neutral-200 rounded-md gap-x-3 hover:bg-neutral-100 focus:ring focus:ring-neutral-300 focus:ring-opacity-80"
             >
               <span>Comenzar Ahora</span>
@@ -52,31 +52,31 @@ function Footer() {
 
             <div className="flex flex-col items-start mt-5 space-y-2">
               <a
-                href="/servicios#branding"
+                href="/servicios/impulsa-tu-marca#branding"
                 className="text-neutral-300 transition-colors duration-300 hover:underline hover:text-blue-500"
               >
                 Branding
               </a>
               <a
-                href="/servicios#social-media"
+                href="/servicios/impulsa-tu-marca#social-media"
                 className="text-neutral-300 transition-colors duration-300 hover:underline hover:text-blue-500"
               >
                 Social Media
               </a>
               <a
-                href="/servicios#asesoria-personalizada"
+                href="/servicios/impulsa-tu-marca#asesoria-personalizada"
                 className="text-neutral-300 transition-colors duration-300 hover:underline hover:text-blue-500"
               >
                 Asesorías Personalizadas
               </a>
               <a
-                href="/servicios#pauta-publicitaria"
+                href="/servicios/impulsa-tu-marca#pauta-publicitaria"
                 className="text-neutral-300 transition-colors duration-300 hover:underline hover:text-blue-500"
               >
                 Pauta Publicitaria
               </a>
               <a
-                href="/servicios#diseño-integral"
+                href="/servicios/impulsa-tu-marca#diseño-integral"
                 className="text-neutral-300 transition-colors duration-300 hover:underline hover:text-blue-500"
               >
                 Diseño Integral

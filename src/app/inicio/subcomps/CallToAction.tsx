@@ -29,7 +29,7 @@ function CallToAction() {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
             <a
-              href="/servicios"
+              href="/servicios/impulsa-tu-marca"
               className="rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-neutral-white shadow-sm hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Ver Servicios

@@ -36,7 +36,7 @@ export default function HeroSection() {
             <div className="flex items-center justify-center mt-8">
               <BlurFade inView delay={0.75}>
                 <a
-                  href="/servicios"
+                  href="/servicios/impulsa-tu-marca"
                   className="rounded-md bg-white p-3 text-sm font-bold text-black shadow-sm hover:bg-neutral-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   Comenzar ahora
