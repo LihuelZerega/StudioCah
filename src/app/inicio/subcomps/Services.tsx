@@ -235,7 +235,7 @@ function Services() {
               </a>
 
               <a
-                href="/servicios/impulsa-tu-marca/#pauta-publicitaria"
+                href="/servicios/desarrollo-web"
                 className="w-fit p-8 space-y-3 border-2 border-neutral-500 border-opacity-70 rounded-xl transition-all duration-500 hover:scale-105"
               >
                 <span className="inline-block border-2 p-2 border-neutral-400 rounded-full">
