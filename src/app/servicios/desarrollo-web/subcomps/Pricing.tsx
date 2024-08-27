@@ -2,6 +2,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import BlurFade from "@/components/BlurFade";
+import Loading from "@/components/Loading";
 
 interface PriceModel {
   id: number;
@@ -14,6 +15,52 @@ const Pricing: React.FC = () => {
   const [prices, setPrices] = useState<PriceModel[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+
+  const phoneNumber = "5491134514873";
+
+  const OnePagemessage = encodeURIComponent(
+    "Hola, estoy interesado en adquirir una *One Page* para mi negocio. Me gustaría obtener más información. Gracias."
+  );
+
+  const LandingPagemessage = encodeURIComponent(
+    "Hola, estoy interesado en adquirir una *Landing Page* para mi negocio. Me gustaría obtener más información. Gracias."
+  );
+
+  const TiendaNubemessage = encodeURIComponent(
+    "Hola, estoy interesado en adquirir una *Tienda Nube* para mi negocio. Me gustaría obtener más información. Gracias."
+  );
+
+  const Ecommercemessage = encodeURIComponent(
+    "Hola, estoy interesado en adquirir una *E-commerce* para mi negocio. Me gustaría obtener más información. Gracias."
+  );
+
+  const OnePagemessageClick = () => {
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${OnePagemessage}`,
+      "_blank"
+    );
+  };
+
+  const LandingPagemessageClick = () => {
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${LandingPagemessage}`,
+      "_blank"
+    );
+  };
+
+  const TiendaNubemessageClick = () => {
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${TiendaNubemessage}`,
+      "_blank"
+    );
+  };
+
+  const EcommerceClick = () => {
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${Ecommercemessage}`,
+      "_blank"
+    );
+  };
 
   useEffect(() => {
     const fetchPrices = async () => {
@@ -31,7 +78,7 @@ const Pricing: React.FC = () => {
     fetchPrices();
   }, []);
 
-  if (loading) return <p>Cargando precios...</p>;
+  if (loading) return <Loading />;
   if (error) return <p>{error}</p>;
 
   const getPriceByName = (name: string, field: 'priceUSA' | 'priceArgentina') =>
@@ -70,6 +117,7 @@ const Pricing: React.FC = () => {
                   <div className="mt-5 py-4 first:pt-0 last:pb-0">
                     <button
                       type="button"
+                      onClick={OnePagemessageClick}
                       className="w-full py-3 px-4 md:px-11 flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50"
                     >
                       Comprar ahora
@@ -102,6 +150,7 @@ const Pricing: React.FC = () => {
                     <div className="flex justify-end">
                       <button
                         type="button"
+                        onClick={LandingPagemessageClick}
                         className="w-full py-3 px-4 md:px-11 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
                       >
                         Comprar ahora
@@ -122,19 +171,18 @@ const Pricing: React.FC = () => {
                   </div>
 
                   <div className="mt-5">
-                    <span className="text-4xl md:text-3xl font-bold text-gray-800">
-                      $180.000
+                    <span className="text-4xl md:text-2xl font-bold text-gray-800">
+                      $Presupuestar
                     </span>
-                    <span className="text-lg font-bold text-gray-800">.99</span>
-                    <span className="ms-1 text-gray-500">ARS / Pago único</span>
                   </div>
 
                   <div className="mt-5 py-4 first:pt-0 last:pb-0">
                     <button
                       type="button"
+                      onClick={TiendaNubemessageClick}
                       className="w-full py-3 px-4 md:px-11 flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50"
                     >
-                      Comprar ahora
+                      Pedir presupuesto
                     </button>
                   </div>
                 </div>
@@ -160,6 +208,7 @@ const Pricing: React.FC = () => {
                   <div className="mt-5 py-4 first:pt-0 last:pb-0">
                     <button
                       type="button"
+                      onClick={EcommerceClick}
                       className="w-full py-3 px-4 md:px-11 flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50"
                     >
                       Comprar ahora

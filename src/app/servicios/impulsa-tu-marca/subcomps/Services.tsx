@@ -56,21 +56,27 @@ function Services() {
   });
 
   const phoneNumber = "5491134514873";
+  
   const Brandingmessage = encodeURIComponent(
     "Hola, estoy interesado en adquirir el servicio de branding para mi negocio."
   );
+
   const SocialMediaMessage = encodeURIComponent(
     "Hola, estoy interesado en adquirir el servicio de social media para mi marca."
   );
+
   const PautaPublicitariaMessage = encodeURIComponent(
     "Hola, estoy interesado en adquirir el servicio de pauta publicitaria para mi marca."
   );
+
   const AsesoriaPersonalizadaMessage = encodeURIComponent(
     "Hola, estoy interesado en agendar una asesoria personalizada para mi marca."
   );
+
   const DisenoIntegralMessage = encodeURIComponent(
     "Hola, estoy interesado en adquirir el servicio de diseño integral para mi marca."
   );
+
   const TiendaNubeMessage = encodeURIComponent(
     "Hola, estoy interesado en adquirir una tienda nube para mi marca."
   );
