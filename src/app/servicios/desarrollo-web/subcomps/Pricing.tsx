@@ -109,7 +109,7 @@ const Pricing: React.FC = () => {
 
                   <div className="mt-5">
                     <span className="text-4xl md:text-3xl font-bold text-gray-800">
-                    <p>${formatPrice(getPriceByName('One Page', 'priceArgentina'))}</p>
+                    <p>$232.000</p>
                     </span>
                     <span className="ms-1 text-gray-500">ARS / Pago único</span>
                   </div>
@@ -141,7 +141,7 @@ const Pricing: React.FC = () => {
 
                   <div className="mt-5">
                     <span className="text-4xl md:text-3xl font-bold text-gray-800">
-                    ${formatPrice(getPriceByName('Landing Page', 'priceArgentina'))}
+                    $423.000
                     </span>
                     <span className="ms-1 text-gray-500">ARS / Pago único</span>
                   </div>
@@ -200,7 +200,7 @@ const Pricing: React.FC = () => {
 
                   <div className="mt-5">
                     <span className="text-4xl md:text-3xl font-bold text-gray-800">
-                    ${formatPrice(getPriceByName('E-commerce', 'priceArgentina'))}
+                    $696.000
                     </span>
                     <span className="ms-1 text-gray-500">ARS / Pago único</span>
                   </div>
